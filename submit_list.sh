@@ -21,18 +21,6 @@ DATASETS=(
     "spikenuc0719_part_4.fasta"
     "spikenuc0719_part_5.fasta"
     "spikenuc0719_part_6.fasta"
-    "spikenuc0719_part_7.fasta"
-    "spikenuc0719_part_8.fasta"
-    "spikenuc0719_part_9.fasta"
-    "spikenuc0719_part_10.fasta"
-    "spikenuc0719_part_11.fasta"
-    "spikenuc0719_part_12.fasta"
-    "spikenuc0719_part_13.fasta"
-    "spikenuc0719_part_14.fasta"
-    "spikenuc0719_part_15.fasta"
-    "spikenuc0719_part_16.fasta"
-    "spikenuc0719_part_17.fasta"
-    "spikenuc0719_part_18.fasta"
 
 )
 
@@ -44,7 +32,7 @@ for f in "${DATASETS[@]}"; do
         continue
     fi
     echo "Submitting: $f"
-    sbatch --dependency=singleton run_slurm.sh --dataset "$f" "${EXTRA_ARGS[@]}"
+    sbatch run_slurm.sh --dataset "$f" "${EXTRA_ARGS[@]}"
 done
 
 echo "All ${#DATASETS[@]} dataset(s) submitted (singleton queue: one at a time)."
