@@ -1,0 +1,10 @@
+name: msa
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - biopython
+  - hmmer

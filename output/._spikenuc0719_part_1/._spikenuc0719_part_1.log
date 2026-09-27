@@ -1,3 +1,0 @@
-13:49:03 [INFO] Using shared config: reference.txt
-13:49:03 [INFO] Config: protein_reference=yes (1273 aa), motifs=1: fusion (48 aa, 1 part(s))
-13:49:03 [ERROR] FAILED: Input FASTA contains no sequences.
