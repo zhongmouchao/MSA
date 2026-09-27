@@ -6,7 +6,10 @@ MSA Pipeline — streamlined, cluster-ready sequence alignment + motif extractio
 Usage (terminal / cluster):
 
     python3 run_pipeline.py                          # process every dataset in ./input
-    python3 run_pipeline.py --input-dir input --output-dir output --monthly
+    python3 run_pipeline.py --monthly --start-year 2000
+    python3 run_pipeline.py --dataset my_data.fasta  # process just this one dataset
+                                                     # (integrated tables are rebuilt
+                                                     #  cumulatively over ./output)
 
 Dataset layout in the input directory
 -------------------------------------
@@ -1165,12 +1168,24 @@ def main():
                     help="minimum fraction of motif positions that must be called "
                          "(non-gap, non-X) to keep a sequence (default 0.9; "
                          "use 1.0 for zero tolerance)")
+    ap.add_argument("--dataset", default=None,
+                    help="process only this one dataset (FASTA file name or base "
+                         "name in the input dir) instead of every FASTA found")
     args = ap.parse_args()
 
     os.makedirs(args.output_dir, exist_ok=True)
 
     fastas = sorted(f for f in os.listdir(args.input_dir)
                     if f.lower().endswith(FASTA_EXTS))
+    if args.dataset:
+        base = os.path.splitext(args.dataset)[0]
+        match = [f for f in fastas
+                 if f == args.dataset or os.path.splitext(f)[0] == base]
+        if not match:
+            print(f"Dataset '{args.dataset}' not found in {args.input_dir}.\n"
+                  f"Available: {', '.join(fastas)}")
+            sys.exit(1)
+        fastas = match
     if not fastas:
         print(f"No FASTA files found in {args.input_dir}")
         sys.exit(1)
@@ -1227,26 +1242,30 @@ def main():
     print(f"{'=' * 60}\nRUN SUMMARY\n{'=' * 60}")
     print(summary_df.to_string(index=False))
 
-    if ok:
-        # group per-dataset count CSVs by motif infix: "" (legacy/single motif)
-        # or "_<motif tag>" -> one integrated CSV per motif
-        groups = {}
-        suffix = f"_counts_by_{tag}_wide.csv"
-        for n in ok:
-            d = os.path.join(args.output_dir, n)
-            for f in sorted(os.listdir(d)):
-                if f == n + suffix or (f.startswith(n + "_") and f.endswith(suffix)):
-                    infix = f[len(n):len(f) - len(suffix)]   # "" or "_fusion"
-                    groups.setdefault(infix, []).append(os.path.join(d, f))
-        for infix, paths in sorted(groups.items()):
-            out_path = os.path.join(args.output_dir,
-                                    f"integrated{infix}_counts_by_{tag}_wide.csv")
-            result = integrate_counts(args.output_dir, paths, out_path, tag)
-            if result:
-                out_path, n_variants, total = result
-                label = infix.lstrip("_") or "motif"
-                print(f"\nIntegrated counts [{label}]: {n_variants:,} unique variants, "
-                      f"{total:,} total records -> {out_path}")
+    # Integration scans EVERY dataset dir in the output folder (not just the
+    # ones processed in this run), so single-dataset runs (--dataset, e.g. one
+    # SLURM job per FASTA) rebuild the integrated tables cumulatively.
+    # Group per-dataset count CSVs by motif infix: "" (legacy/single motif)
+    # or "_<motif tag>" -> one integrated CSV per motif.
+    groups = {}
+    suffix = f"_counts_by_{tag}_wide.csv"
+    for n in sorted(os.listdir(args.output_dir)):
+        d = os.path.join(args.output_dir, n)
+        if not os.path.isdir(d):
+            continue
+        for f in sorted(os.listdir(d)):
+            if f == n + suffix or (f.startswith(n + "_") and f.endswith(suffix)):
+                infix = f[len(n):len(f) - len(suffix)]   # "" or "_fusion"
+                groups.setdefault(infix, []).append(os.path.join(d, f))
+    for infix, paths in sorted(groups.items()):
+        out_path = os.path.join(args.output_dir,
+                                f"integrated{infix}_counts_by_{tag}_wide.csv")
+        result = integrate_counts(args.output_dir, paths, out_path, tag)
+        if result:
+            out_path, n_variants, total = result
+            label = infix.lstrip("_") or "motif"
+            print(f"\nIntegrated counts [{label}]: {n_variants:,} unique variants, "
+                  f"{total:,} total records -> {out_path}")
 
     print(f"\nRun summary written to {summary_path}")
     print(f"SUMMARY: {len(ok)} succeeded, {len(failed)} failed")
