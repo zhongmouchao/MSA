@@ -16,7 +16,6 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 DATASETS=(
-    "spikenuc0719_part_1.fasta"
     "spikenuc0719_part_2.fasta"
     "spikenuc0719_part_3.fasta"
     "spikenuc0719_part_4.fasta"
@@ -34,6 +33,7 @@ DATASETS=(
     "spikenuc0719_part_16.fasta"
     "spikenuc0719_part_17.fasta"
     "spikenuc0719_part_18.fasta"
+
 
 )
 
