@@ -1,50 +1,70 @@
 #!/bin/bash
-# =====================================================================
-# Submit one SLURM job per FASTA dataset, running ONE AT A TIME.
-#
-# 1. Edit the DATASETS list below: one FASTA file name per line
-#    (files must be in ./input, together with reference.txt or a
-#    per-dataset <name>.txt config).
-# 2. From the pipeline folder:   bash submit_list.sh
-#
-# Each item becomes:  sbatch run_slurm.sh --dataset "<file>"
-# --dependency=singleton (same job name) makes the cluster run them
-# sequentially. After every job finishes, the pipeline rebuilds the
-# integrated count tables in ./output from everything completed so far.
-# =====================================================================
+# Submit one independent MSA/motif/counting job per .fasta file in input/.
+# Put this script and run_slurm.sh alongside run_pipeline.py in ~/MSA.
+# Run: bash submit_list.sh
+# No split jobs are submitted. Monthly counts are enabled below.
 set -euo pipefail
 cd "$(dirname "$0")"
 
-DATASETS=(
-    "spikenuc0719_part_2.fasta"
-    "spikenuc0719_part_3.fasta"
-    "spikenuc0719_part_4.fasta"
-    "spikenuc0719_part_5.fasta"
-    "spikenuc0719_part_6.fasta"
-    "spikenuc0719_part_7.fasta"
-    "spikenuc0719_part_8.fasta"
-    "spikenuc0719_part_9.fasta"
-    "spikenuc0719_part_10.fasta"
-    "spikenuc0719_part_11.fasta"
-    "spikenuc0719_part_12.fasta"
-    "spikenuc0719_part_13.fasta"
-    "spikenuc0719_part_14.fasta"
-    "spikenuc0719_part_15.fasta"
-    "spikenuc0719_part_16.fasta"
-    "spikenuc0719_part_17.fasta"
-    "spikenuc0719_part_18.fasta"
+if [ "$#" -ne 0 ]; then
+    echo "Usage: bash submit_list.sh (no split/run argument needed)" >&2
+    exit 1
+fi
 
-)
+EXTRA_ARGS=(--monthly)
+mkdir -p logs
 
-EXTRA_ARGS=(--monthly)          # e.g. EXTRA_ARGS=(--monthly --start-year 2000)
+# Query once. If Slurm cannot answer, do not mistake that for an empty queue.
+if ! queued_jobs=$(squeue -u "$USER" -h -o '%j'); then
+    echo "Could not check queued jobs. No jobs submitted; try again when Slurm responds." >&2
+    exit 1
+fi
 
-for f in "${DATASETS[@]}"; do
-    if [ ! -f "input/$f" ]; then
-        echo "SKIP: input/$f not found" >&2
+found=0
+submitted=0
+skipped=0
+failed=0
+
+for chunk in input/*.fasta; do
+    [ -f "$chunk" ] || continue
+    found=$((found + 1))
+    filename="${chunk##*/}"
+    base="${filename%.fasta}"
+    job_name="msa_$base"
+
+    if [ ! -s "$chunk" ]; then
+        echo "SKIP: $filename is empty."
+        skipped=$((skipped + 1))
         continue
     fi
-    echo "Submitting: $f"
-    sbatch run_slurm.sh --dataset "$f" "${EXTRA_ARGS[@]}"
+
+    if [ -f "output/$base/.msa_complete" ]; then
+        echo "SKIP: $filename completed successfully on an earlier run."
+        skipped=$((skipped + 1))
+        continue
+    fi
+
+    if printf '%s\n' "$queued_jobs" | grep -Fxq "$job_name"; then
+        echo "SKIP: $filename already has a queued/running job."
+        skipped=$((skipped + 1))
+        continue
+    fi
+
+    echo "Submitting MSA job: $filename"
+    if sbatch --job-name="$job_name" run_slurm.sh --dataset "$filename" "${EXTRA_ARGS[@]}"; then
+        submitted=$((submitted + 1))
+    else
+        echo "WARNING: Submission not confirmed for $filename; check Slurm before retrying." >&2
+        failed=$((failed + 1))
+    fi
+    sleep 1
 done
 
-echo "All ${#DATASETS[@]} dataset(s) submitted (singleton queue: one at a time)."
+if [ "$found" -eq 0 ]; then
+    echo "No FASTA files found: input/*.fasta" >&2
+    exit 1
+fi
+
+echo "Found: $found; submissions confirmed: $submitted; skipped: $skipped; unconfirmed: $failed."
+echo "Check jobs with: squeue -u \"\$USER\""
+[ "$failed" -eq 0 ]
