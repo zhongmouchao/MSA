@@ -16,11 +16,24 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 DATASETS=(
+    "spikenuc0719_part_1.fasta"
     "spikenuc0719_part_2.fasta"
     "spikenuc0719_part_3.fasta"
     "spikenuc0719_part_4.fasta"
     "spikenuc0719_part_5.fasta"
     "spikenuc0719_part_6.fasta"
+    "spikenuc0719_part_7.fasta"
+    "spikenuc0719_part_8.fasta"
+    "spikenuc0719_part_9.fasta"
+    "spikenuc0719_part_10.fasta"
+    "spikenuc0719_part_11.fasta"
+    "spikenuc0719_part_12.fasta"
+    "spikenuc0719_part_13.fasta"
+    "spikenuc0719_part_14.fasta"
+    "spikenuc0719_part_15.fasta"
+    "spikenuc0719_part_16.fasta"
+    "spikenuc0719_part_17.fasta"
+    "spikenuc0719_part_18.fasta"
 
 )
 

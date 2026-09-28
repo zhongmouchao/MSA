@@ -507,7 +507,10 @@ def hmm_align_proteins(aa_records, ref_seq, logger, stats=None):
         cmd = ["hmmalign", "-o", final_sto, hmm, query_fa]
         r = subprocess.run(cmd, capture_output=True, text=True)
         if r.returncode != 0:
-            raise RuntimeError(f"hmmalign failed: {r.stderr.strip()[:500]}")
+            # negative returncode = killed by a signal (e.g. -9 = SIGKILL,
+            # typically the SLURM/cgroup OOM killer -> raise --mem)
+            raise RuntimeError(f"hmmalign failed (exit code {r.returncode}): "
+                               f"{r.stderr.strip()[:500]}")
         aln = AlignIO.read(final_sto, "stockholm")
 
     # restore original IDs by position (REF first)

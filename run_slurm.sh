@@ -18,7 +18,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4        # hmmalign is single-threaded; 4 is plenty for I/O overlap
-#SBATCH --mem=16G                # ~550k sequences need ~6 GB; raise for larger inputs
+#SBATCH --mem=48G                # hmmalign holds ALL proteins in RAM; ~1M seqs need ~30G, so 48G is safe for 2M+ seqs
 #SBATCH --time=24:00:00
 #SBATCH --partition=default_partition
 #SBATCH --mail-type=ALL
