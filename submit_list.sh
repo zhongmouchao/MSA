@@ -34,7 +34,6 @@ DATASETS=(
     "spikenuc0719_part_17.fasta"
     "spikenuc0719_part_18.fasta"
 
-
 )
 
 EXTRA_ARGS=(--monthly)          # e.g. EXTRA_ARGS=(--monthly --start-year 2000)
