@@ -2,5 +2,7 @@ input/
 output/
 logs/
 aligned/
+aligned_spike/
 RAW_FASTA_DATA/
 Virogym_Benchmark/
+virogym_79_benchmarks_combined_with_target_type.csv/

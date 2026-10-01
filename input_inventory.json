@@ -1,0 +1,807 @@
+{
+  "fasta_root": "/home/zc83/MSA/RAW_FASTA_DATA",
+  "scanned_at": "2026-09-30 21:19:34",
+  "sample_size": 1000,
+  "files": [
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/IAV/all/HA/gisaid_epiflu_sequence_all_till 2025.fasta",
+      "rel_path": "IAV/all/HA/gisaid_epiflu_sequence_all_till 2025.fasta",
+      "folder": "IAV/all/HA",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 987,
+      "n_records": 722263,
+      "size_bytes": 1260173378
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/IAV/avian/HA/gisaid_epiflu_sequence_avian_till 2025.fasta",
+      "rel_path": "IAV/avian/HA/gisaid_epiflu_sequence_avian_till 2025.fasta",
+      "folder": "IAV/avian/HA",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 1703,
+      "n_records": 96337,
+      "size_bytes": 169343887
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/IAV/avian/PB2/gisaid_epiflu_sequence_avian_201501_202112.fasta",
+      "rel_path": "IAV/avian/PB2/gisaid_epiflu_sequence_avian_201501_202112.fasta",
+      "folder": "IAV/avian/PB2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 2308,
+      "n_records": 18418,
+      "size_bytes": 44878807
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/IAV/avian/PB2/gisaid_epiflu_sequence_avian_202201_202312.fasta",
+      "rel_path": "IAV/avian/PB2/gisaid_epiflu_sequence_avian_202201_202312.fasta",
+      "folder": "IAV/avian/PB2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 2316,
+      "n_records": 18868,
+      "size_bytes": 45905458
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/IAV/avian/PB2/gisaid_epiflu_sequence_avian_202401_202512.fasta",
+      "rel_path": "IAV/avian/PB2/gisaid_epiflu_sequence_avian_202401_202512.fasta",
+      "folder": "IAV/avian/PB2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 2280,
+      "n_records": 15120,
+      "size_bytes": 36764096
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/IAV/avian/PB2/gisaid_epiflu_sequence_avian_before 2015.fasta",
+      "rel_path": "IAV/avian/PB2/gisaid_epiflu_sequence_avian_before 2015.fasta",
+      "folder": "IAV/avian/PB2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 2316,
+      "n_records": 16521,
+      "size_bytes": 40164262
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/IAV/human/HA/gisaid_epiflu_sequence_human_till 2025.fasta",
+      "rel_path": "IAV/human/HA/gisaid_epiflu_sequence_human_till 2025.fasta",
+      "folder": "IAV/human/HA",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 1701,
+      "n_records": 560373,
+      "size_bytes": 982341409
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/gisaid_hcov-19_2025_07_20_12_31.fasta",
+      "rel_path": "SCV2/gisaid_hcov-19_2025_07_20_12_31.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 29753,
+      "n_records": 94721,
+      "size_bytes": 2867342037
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_10_part_1_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_10_part_1_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 1000859701
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_10_part_2_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_10_part_2_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3814,
+      "n_records": 250000,
+      "size_bytes": 1001768287
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_10_part_3_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_10_part_3_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 1002486898
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_10_part_4_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_10_part_4_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 1001544310
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_11_part_1_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_11_part_1_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 1000266971
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_11_part_2_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_11_part_2_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 995070503
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_11_part_3_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_11_part_3_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 999816863
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_11_part_4_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_11_part_4_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 999970450
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_12_part_1_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_12_part_1_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 2508,
+      "n_records": 250000,
+      "size_bytes": 998438329
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_12_part_2_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_12_part_2_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 993433655
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_12_part_3_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_12_part_3_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 994543354
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_12_part_4_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_12_part_4_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3807,
+      "n_records": 250000,
+      "size_bytes": 998429589
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_13_part_1_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_13_part_1_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 250000,
+      "size_bytes": 995823673
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_13_part_2_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_13_part_2_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 2502,
+      "n_records": 250000,
+      "size_bytes": 997853175
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_13_part_3_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_13_part_3_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3807,
+      "n_records": 250000,
+      "size_bytes": 990093055
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_13_part_4_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_13_part_4_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 249999,
+      "size_bytes": 993577753
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_14_part_1_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_14_part_1_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3807,
+      "n_records": 250000,
+      "size_bytes": 994618416
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_14_part_2_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_14_part_2_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3807,
+      "n_records": 250000,
+      "size_bytes": 989006782
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_14_part_3_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_14_part_3_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3807,
+      "n_records": 250000,
+      "size_bytes": 993560327
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_14_part_4_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_14_part_4_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3807,
+      "n_records": 250000,
+      "size_bytes": 994846866
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_15_part_1_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_15_part_1_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3807,
+      "n_records": 250000,
+      "size_bytes": 988350473
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_15_part_2_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_15_part_2_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3810,
+      "n_records": 249999,
+      "size_bytes": 995381577
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_15_part_3_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_15_part_3_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3807,
+      "n_records": 250000,
+      "size_bytes": 995185178
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_15_part_4_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_15_part_4_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3807,
+      "n_records": 250000,
+      "size_bytes": 997226032
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_16_part_1_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_16_part_1_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3810,
+      "n_records": 250000,
+      "size_bytes": 993843158
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_16_part_2_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_16_part_2_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 997352362
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_16_part_3_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_16_part_3_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3810,
+      "n_records": 250000,
+      "size_bytes": 1002890544
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_16_part_4_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_16_part_4_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3807,
+      "n_records": 250000,
+      "size_bytes": 1002463303
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_17_part_1_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_17_part_1_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3810,
+      "n_records": 250000,
+      "size_bytes": 1002018133
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_17_part_2_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_17_part_2_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3810,
+      "n_records": 250000,
+      "size_bytes": 1002438790
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_17_part_3_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_17_part_3_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3810,
+      "n_records": 250000,
+      "size_bytes": 1000972720
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_17_part_4_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_17_part_4_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3810,
+      "n_records": 250000,
+      "size_bytes": 1000012512
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_18_part_1_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_18_part_1_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3807,
+      "n_records": 88243,
+      "size_bytes": 353084017
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_18_part_2_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_18_part_2_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3807,
+      "n_records": 88243,
+      "size_bytes": 353130221
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_18_part_3_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_18_part_3_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3810,
+      "n_records": 88243,
+      "size_bytes": 352579652
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_18_part_4_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_18_part_4_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3810,
+      "n_records": 88240,
+      "size_bytes": 351602638
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_1_part_1_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_1_part_1_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3822,
+      "n_records": 250000,
+      "size_bytes": 1002674783
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_1_part_2_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_1_part_2_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3822,
+      "n_records": 250000,
+      "size_bytes": 1000531141
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_1_part_3_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_1_part_3_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 974401852
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_1_part_4_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_1_part_4_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3819,
+      "n_records": 250000,
+      "size_bytes": 997147002
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_2_part_1_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_2_part_1_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 984584823
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_2_part_2_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_2_part_2_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 1004825173
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_2_part_3_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_2_part_3_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3822,
+      "n_records": 250000,
+      "size_bytes": 1004312687
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_2_part_4_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_2_part_4_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3822,
+      "n_records": 250000,
+      "size_bytes": 1005606820
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_3_part_1_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_3_part_1_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 250000,
+      "size_bytes": 998097135
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_3_part_2_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_3_part_2_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 250000,
+      "size_bytes": 1002614654
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_3_part_3_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_3_part_3_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 250000,
+      "size_bytes": 998674008
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_3_part_4_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_3_part_4_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 250000,
+      "size_bytes": 1003897169
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_4_part_1_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_4_part_1_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 250000,
+      "size_bytes": 1001949648
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_4_part_2_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_4_part_2_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 250000,
+      "size_bytes": 1001869492
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_4_part_3_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_4_part_3_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 250000,
+      "size_bytes": 1004685711
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_4_part_4_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_4_part_4_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 250000,
+      "size_bytes": 999723081
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_5_part_1_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_5_part_1_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 250000,
+      "size_bytes": 1000851285
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_5_part_2_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_5_part_2_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 250000,
+      "size_bytes": 1000109900
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_5_part_3_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_5_part_3_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 250000,
+      "size_bytes": 1003319680
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_5_part_4_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_5_part_4_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 250000,
+      "size_bytes": 1006544921
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_6_part_1_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_6_part_1_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 250000,
+      "size_bytes": 1004846436
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_6_part_2_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_6_part_2_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 250000,
+      "size_bytes": 1003141059
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_6_part_3_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_6_part_3_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 249999,
+      "size_bytes": 1002246718
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_6_part_4_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_6_part_4_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 250000,
+      "size_bytes": 1003355918
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_7_part_1_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_7_part_1_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 249999,
+      "size_bytes": 1003673206
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_7_part_2_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_7_part_2_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 250000,
+      "size_bytes": 999751597
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_7_part_3_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_7_part_3_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 250000,
+      "size_bytes": 1002418797
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_7_part_4_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_7_part_4_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3816,
+      "n_records": 250000,
+      "size_bytes": 1002817924
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_8_part_1_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_8_part_1_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 1005115727
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_8_part_2_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_8_part_2_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 1004145739
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_8_part_3_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_8_part_3_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 996276119
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_8_part_4_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_8_part_4_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 1003602291
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_9_part_1_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_9_part_1_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 1002070129
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_9_part_2_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_9_part_2_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 1001277865
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_9_part_3_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_9_part_3_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 1000390552
+    },
+    {
+      "path": "/home/zc83/MSA/RAW_FASTA_DATA/SCV2/spikenuc0719_part_9_part_4_of_4.fasta",
+      "rel_path": "SCV2/spikenuc0719_part_9_part_4_of_4.fasta",
+      "folder": "SCV2",
+      "molecule": "nucleotide",
+      "state": "raw",
+      "median_length": 3813,
+      "n_records": 250000,
+      "size_bytes": 1002574568
+    }
+  ]
+}
